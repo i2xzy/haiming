@@ -1,0 +1,44 @@
+.Header {
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 2px;
+  width: 100%;
+  padding: 46px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  position: absolute;
+
+  a a:hover,
+  a:focus,
+  a:visited {
+    color: black;
+    font-weight: 200;
+    outline: none;
+  }
+
+  &-title {
+    display: flex;
+    flex-direction: column;
+    &-sup {
+      font-size: 58px;
+      line-height: 58px;
+    }
+    &-sub {
+      font-size: 32px;
+      letter-spacing: 6px;
+    }
+  }
+
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+
+    &-item {
+      font-size: 22px;
+      text-decoration: none;
+      margin-left: 16px;
+    }
+  }
+}

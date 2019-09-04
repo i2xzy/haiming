@@ -1,0 +1,47 @@
+.Product {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  color: #333;
+
+  &.pink {
+    color: #ff6f61;
+
+    a {
+      color: #ff6f61;
+
+      &:hover,
+      &:focus,
+      &:visited {
+        color: #ff6f61;
+      }
+    }
+  }
+
+  &-bg {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-info {
+    padding: 46px;
+    display: flex;
+    justify-content: space-between;
+
+    &-description {
+      width: 50%;
+    }
+
+    &-details {
+      width: 30%;
+
+      h4:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

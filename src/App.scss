@@ -1,0 +1,16 @@
+.App {
+  display: flex;
+  font-family: Montserrat;
+
+  a {
+    color: black;
+
+    &:hover,
+    &:focus,
+    &:visited {
+      color: black;
+      font-weight: 200;
+      outline: none;
+    }
+  }
+}
