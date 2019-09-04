@@ -21,7 +21,8 @@ const Home = () => (
               className="Home-product-bg"
               style={{
                 background: `url(${product.image})`,
-                backgroundSize: 'cover'
+                backgroundSize: 'cover',
+                backgroundPosition: 'bottom'
               }}
             >
               <ProductName
