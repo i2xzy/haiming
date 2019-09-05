@@ -22,10 +22,11 @@ const Product = ({ product }) => (
     </div>
     <div className="Product-info">
       <div className="Product-info-description">{product.description}</div>
-      <div
-        className="Product-info-details"
-        dangerouslySetInnerHTML={{ __html: product.details }}
-      ></div>
+      <div className="Product-info-details">
+        <span>Colour: {product.colour}</span>
+        <span>Material: {product.details.material}</span>
+        <span>Size: {product.details.size}</span>
+      </div>
     </div>
   </div>
 );

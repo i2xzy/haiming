@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 import './Header.scss';
 
@@ -13,17 +13,17 @@ const Header = () => (
     </div>
 
     <nav className="Header-nav">
-      <Link className="Header-nav-item" to="/#products">
+      <Link smooth className="Header-nav-item" to="/#products">
         Products
       </Link>
-      <Link className="Header-nav-item" to="/#exhibitons">
+      <Link smooth className="Header-nav-item" to="/#exhibitons">
         Exhibitons
       </Link>
 
       <Link className="Header-nav-item" to="/about">
         About
       </Link>
-      <Link className="Header-nav-item" to="/about#contact">
+      <Link smooth className="Header-nav-item" to="/about#contact">
         Contact
       </Link>
     </nav>
