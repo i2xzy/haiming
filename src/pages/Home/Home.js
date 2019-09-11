@@ -5,13 +5,13 @@ import products from '../../data/products.js';
 
 import { Header, ProductName } from '../../Components';
 
-import stone from '../../img/stone.png';
+import images from '../../img';
 import './Home.scss';
 
 const Home = () => (
   <div className="Home">
     <Header />
-    <img className="Home-image" src={stone} alt="stone" />
+    <img className="Home-image" src={images.stone[0]} alt="stone" />
 
     <div className="Home-products" id="products">
       {products.map(product => (
@@ -22,7 +22,9 @@ const Home = () => (
               style={{
                 background: `url(${product.image})`,
                 backgroundSize: 'cover',
-                backgroundPosition: 'bottom'
+                backgroundPosition: product.imagePosition || 'bottom',
+                justifyContent: product.namePosition || 'center',
+                alignItems: product.namePosition && 'center'
               }}
             >
               <ProductName

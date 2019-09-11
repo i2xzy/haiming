@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from '../../Components';
 
-import stone from '../../img/stone.png';
+import images from '../../img';
 import './About.scss';
 
 const About = props => (
@@ -13,7 +13,7 @@ const About = props => (
       committed to using a combination of craft and mechanical methods to create
       different visual effects with different materials.
     </div>
-    <img className="About-image" src={stone} alt="stone" />
+    <img className="About-image" src={images.stone[1]} alt="stone" />
     <div className="About-contact" id="contact">
       <div className="About-contact-address">
         Haiming Li

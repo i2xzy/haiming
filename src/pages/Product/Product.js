@@ -11,13 +11,17 @@ const Product = ({ product }) => (
       className="Product-bg"
       style={{
         background: `url(${product.image})`,
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
+        backgroundPosition: product.imagePosition || 'bottom',
+        justifyContent: product.namePosition || 'center',
+        alignItems: product.namePosition && 'center'
       }}
     >
       <ProductName
         name={product.name}
         chineseName={product.chineseName}
         isCentered={product.isCentered}
+        marginTop={160}
       />
     </div>
     <div className="Product-info">
@@ -27,6 +31,17 @@ const Product = ({ product }) => (
         <span>Material: {product.details.material}</span>
         <span>Size: {product.details.size}</span>
       </div>
+    </div>
+    <div className="Product-images">
+      {console.log(product.additionalImages)}
+      {product.additionalImages.map((image, i) => (
+        <img
+          key={i}
+          className="Product-image"
+          src={image}
+          alt={`${product.name} ${i + 1}`}
+        />
+      ))}
     </div>
   </div>
 );
