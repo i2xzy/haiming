@@ -13,7 +13,7 @@ const About = props => (
       committed to using a combination of craft and mechanical methods to create
       different visual effects with different materials.
     </div>
-    <img className="About-image" src={images.stone[1]} alt="stone" />
+    <img className="About-image" src={images.stone[5]} alt="stone" />
     <div className="About-contact" id="contact">
       <div className="About-contact-address">
         Haiming Li

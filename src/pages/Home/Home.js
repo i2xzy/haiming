@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 import products from '../../data/products.js';
+import { exhibition } from '../../img/';
 
-import { Header, ProductName } from '../../Components';
+import { Header } from '../../Components';
 
 import images from '../../img';
 import './Home.scss';
@@ -11,7 +12,7 @@ import './Home.scss';
 const Home = () => (
   <div className="Home">
     <Header />
-    <img className="Home-image" src={images.stone[0]} alt="stone" />
+    <img className="Home-image" src={images.stone[2]} alt="stone" />
 
     <div className="Home-products" id="products">
       {products.map(product => (
@@ -20,21 +21,21 @@ const Home = () => (
             <div
               className="Home-product-bg"
               style={{
-                background: `url(${product.image})`,
+                background: `url(${product.homeImage || product.image})`,
                 backgroundSize: 'cover',
                 backgroundPosition: product.imagePosition || 'bottom',
                 justifyContent: product.namePosition || 'center',
                 alignItems: product.namePosition && 'center'
               }}
-            >
-              <ProductName
-                name={product.name}
-                chineseName={product.chineseName}
-                isCentered={product.isCentered}
-              />
-            </div>
+            />
           </div>
         </Link>
+      ))}
+    </div>
+
+    <div className="Home-exhibitions" id="exhibitions">
+      {exhibition.map((img, i) => (
+        <img key={i} className="Home-exhibitions-image" src={img} alt={i + 1} />
       ))}
     </div>
   </div>

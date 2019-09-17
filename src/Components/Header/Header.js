@@ -16,7 +16,7 @@ const Header = () => (
       <Link smooth className="Header-nav-item" to="/#products">
         Products
       </Link>
-      <Link smooth className="Header-nav-item" to="/#exhibitons">
+      <Link smooth className="Header-nav-item" to="/#exhibitions">
         Exhibitons
       </Link>
 
