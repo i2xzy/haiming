@@ -23,9 +23,8 @@ const Home = () => (
               style={{
                 background: `url(${product.homeImage || product.image})`,
                 backgroundSize: 'cover',
-                backgroundPosition: product.imagePosition || 'bottom',
-                justifyContent: product.namePosition || 'center',
-                alignItems: product.namePosition && 'center'
+                backgroundPosition:
+                  product.homeImagePosition || product.imagePosition || 'center'
               }}
             />
           </div>

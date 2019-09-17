@@ -13,7 +13,8 @@ const Product = ({ product }) => (
         className="Product-bg"
         style={{
           background: `url(${product.image})`,
-          backgroundSize: 'cover'
+          backgroundSize: 'cover',
+          backgroundPosition: product.imagePosition || 'top'
         }}
       ></div>
       <div className="Product-info">
