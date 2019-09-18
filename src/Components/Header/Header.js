@@ -7,16 +7,16 @@ const Header = () => (
   <header className="Header">
     <div className="Header-title">
       <div className="Header-title-sup">
-        <Link to="/">Haming Li</Link>
+        <Link to="/home">Haming Li</Link>
       </div>
       <div className="Header-title-sub">Design Studio</div>
     </div>
 
     <nav className="Header-nav">
-      <Link smooth className="Header-nav-item" to="/#products">
+      <Link smooth className="Header-nav-item" to="/home#products">
         Products
       </Link>
-      <Link smooth className="Header-nav-item" to="/#exhibitions">
+      <Link smooth className="Header-nav-item" to="/home#exhibitions">
         Exhibitons
       </Link>
 

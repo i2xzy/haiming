@@ -7,7 +7,13 @@ import './Product.scss';
 
 const Product = ({ product }) => (
   <ScrollToTop>
-    <div className={classnames(['Product', product.colour])}>
+    <div
+      className={classnames([
+        'Product',
+        product.colour === 'Pink/Black' && 'pink',
+        product.colour === 'Black/White' && 'red'
+      ])}
+    >
       <Header />
       <div
         className="Product-bg"

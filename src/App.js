@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 import products from './data/products.js';
-import { Home, About, Product } from './pages';
+import { Landing, Home, About, Product } from './pages';
 
 import './App.scss';
 
@@ -15,6 +15,9 @@ const App = () => (
   <div className="App">
     <Router>
       <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/home" component={Home} />
+
         <Route path="/about" component={About} />
         <Route
           path="/product/:slug"

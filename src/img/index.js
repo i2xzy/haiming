@@ -1,4 +1,5 @@
 module.exports = {
+  logo: require('./logo.svg'),
   armour: [
     require('./armour/1.jpg'),
     require('./armour/2.jpg'),

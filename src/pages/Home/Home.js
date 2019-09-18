@@ -17,7 +17,12 @@ const Home = () => (
     <div className="Home-products" id="products">
       {products.map(product => (
         <Link to={`/product/${product.slug}`}>
-          <div className={classnames(['Home-product', product.colour])}>
+          <div
+            className={classnames([
+              'Home-product',
+              product.colour === 'Pink/Black' && 'pink'
+            ])}
+          >
             <div
               className="Home-product-bg"
               style={{
@@ -32,7 +37,10 @@ const Home = () => (
       ))}
     </div>
 
-    <div className="Home-exhibitions" id="exhibitions">
+    <h2 className="Home-heading" id="exhibitions">
+      Exhibitions
+    </h2>
+    <div className="Home-exhibitions">
       {exhibition.map((img, i) => (
         <img key={i} className="Home-exhibitions-image" src={img} alt={i + 1} />
       ))}
